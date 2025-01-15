@@ -1,0 +1,113 @@
+/* Reset styles */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+  /*height: auto;*/
+}
+
+svg {
+  display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input,
+button,
+textarea {
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+
+label,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+textarea:focus,
+textarea:active,
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: var(--primery-color-white);
+}
+
+:root {
+  --primery-color-main: #101828;
+  --primery-color-text: #475467;
+  --primery-color-white: #fff;
+  --primery-color-inputs: #f7f7f7;
+  --primery-color-badges: #f2f4f7;
+  --primery-color-gray: #6c717b;
+  --primery-color-gray-light: #dadde1;
+  --primery-color-red: #e44848;
+  --primery-color-red-hover: #d84343;
+  --primery-color-rating: #ffc531;
+  --primery-color-blue: #3470ff;
+  --primery-color-blue-hover: #0b44cd;
+  --font-size-lg: 32px; /* Большой шрифт */
+  --font-size-md: 24px; /* Средний шрифт */
+  --font-size-sm: 16px; /* Маленький шрифт */
+  --line-height: 1.5; /* Высота строки */
+  /*--padding-md: 16px;  Средний отступ */
+  --border-radius-button: 200px;
+  --border-radius-icon: 12px;
+  --border-radius-hpoto: 10px;
+  --max-width: 1440px; /* Максимальная ширина контейнера */
+}
