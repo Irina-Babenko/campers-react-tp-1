@@ -1,0 +1,31 @@
+.container {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+}
+
+.logoLink {
+  position: absolute;
+  left: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link {
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  color: var(--primery-color-main);
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primery-color-main);
+}
+
+.active {
+  font-weight: 500;
+  color: var(--primery-color-red-hover);
+}
