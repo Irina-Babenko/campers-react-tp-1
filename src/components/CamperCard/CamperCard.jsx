@@ -4,8 +4,11 @@ import Button from "../ui/Button/Button";
 import Heart from "../ui/icons/Heart";
 import Star from "../ui/icons/Star";
 import Map from "../ui/icons/Map";
+import { getAvailableFeatures } from "../../utils/getAvailableFeatures";
 
 export default function CamperCard({ camper }) {
+  const availableFeatures = getAvailableFeatures(camper);
+
   return (
     <div className={css.card}>
       {camper.gallery?.length > 0 && (
@@ -29,6 +32,16 @@ export default function CamperCard({ camper }) {
           <p className={css.location}>{camper.location}</p>
         </div>
         <p className={css.description}>{camper.description}</p>
+
+        <div className={css.features}>
+          {availableFeatures.map(({ label, Icon }) => (
+            <div key={label} className={css.feature}>
+              <Icon size={20} className={css.featureIcon} />
+              <span>{label}</span>
+            </div>
+          ))}
+        </div>
+
         <Button>Show more</Button>
       </div>
     </div>

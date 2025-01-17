@@ -77,3 +77,35 @@
   line-height: 1.5;
   color: var(--primery-color-text);
 }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 48px;
+  background: var(--primery-color-badges);
+  mix-blend-mode: multiply;
+}
+
+.featureIcon {
+  margin-right: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.feature span {
+  margin-left: 2px;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  text-align: center;
+  color: var(--primery-color-main);
+}
