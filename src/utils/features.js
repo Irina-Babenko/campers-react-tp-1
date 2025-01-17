@@ -1,5 +1,5 @@
-// import FuelPump from "../components/ui/icons/FuelPump"; добавить тип двигателя
-// добавить тип коробки передач
+import FuelPump from "../components/ui/icons/FuelPump";
+import Diagram from "../components/ui/icons/Diagram";
 import Wind from "../components/ui/icons/Wind";
 import Bathroom from "../components/ui/icons/Bathroom";
 import CupHot from "../components/ui/icons/CupHot";
@@ -11,6 +11,14 @@ import Gas from "../components/ui/icons/Gas";
 import Water from "../components/ui/icons/Water";
 
 export const FEATURES = {
+  engine: (type) => ({
+    label: type.charAt(0).toUpperCase() + type.slice(1),
+    Icon: FuelPump,
+  }),
+  transmission: (type) => ({
+    label: type.charAt(0).toUpperCase() + type.slice(1),
+    Icon: Diagram,
+  }),
   AC: { label: "AC", Icon: Wind },
   bathroom: { label: "Bathroom", Icon: Bathroom },
   kitchen: { label: "Kitchen", Icon: CupHot },

@@ -15,7 +15,7 @@ export default function Filters() {
     <div className={css.filters}>
       <input
         type="text"
-        placeholder="Enter location"
+        placeholder="Location"
         value={location}
         onChange={(e) => setLocation(e.target.value)}
       />
