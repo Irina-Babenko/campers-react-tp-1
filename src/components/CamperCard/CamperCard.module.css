@@ -1,0 +1,79 @@
+.card {
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.image {
+  border-radius: var(--border-radius-hpoto);
+  width: 292px;
+  height: 320px;
+  object-fit: cover;
+  object-position: right;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 524px;
+  margin-left: 24px;
+}
+
+.firstRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  line-height: 1.33;
+  color: var(--primery-color-main);
+}
+
+.firstRow .price {
+  margin-right: 12px;
+}
+
+.firstRow .name {
+  margin-right: auto;
+}
+
+/* .heartIcon {
+} */
+
+.secondRow {
+  display: flex;
+  margin: 8px 0;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--primery-color-main);
+}
+
+.rating {
+  display: flex;
+  margin-left: 4px;
+}
+
+.reviews {
+  margin-left: 4px;
+  margin-right: 16px;
+}
+
+.location {
+  margin-left: 4px;
+}
+
+.description {
+  margin: 24px 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--primery-color-text);
+}

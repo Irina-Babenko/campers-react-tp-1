@@ -1,0 +1,27 @@
+.catalogContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 64px;
+}
+
+.title {
+  visibility: hidden;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.filtersContainer {
+  flex: 1;
+  max-width: 360px;
+}
+
+.campersContainer {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}

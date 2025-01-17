@@ -85,7 +85,7 @@ button:active {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--primery-color-white);
 }
 
@@ -110,5 +110,5 @@ body {
   --border-radius-button: 200px;
   --border-radius-icon: 12px;
   --border-radius-hpoto: 10px;
-  --max-width: 1440px; /* Максимальная ширина контейнера */
+  --max-width: 1440px;
 }
