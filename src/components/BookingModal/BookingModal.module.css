@@ -1,0 +1,60 @@
+.modalContainer {
+  max-width: 641px;
+  flex-grow: 1;
+  padding: 44px 57px;
+  border-radius: 10px;
+  border: 1px solid #dadde1;
+}
+
+.modalTitle {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primery-color-main);
+}
+
+.modalSubtitle {
+  margin-bottom: 24px;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--primery-color-gray);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 18px;
+  font-size: var(--font-size-sm);
+  border-radius: 12px;
+  padding-left: 10px;
+  background: var(--primery-color-inputs);
+}
+
+textarea {
+  height: 118px;
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+  background-color: var(--primery-color-inputs);
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.submitButton {
+  display: block;
+  width: fit-content;
+  margin: 24px auto 0;
+}

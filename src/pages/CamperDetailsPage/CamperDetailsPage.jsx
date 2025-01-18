@@ -6,6 +6,7 @@ import { fetchCamperById } from "../../redux/campersSlice";
 import DetailsCamper from "../../components/DetailsCamper/DetailsCamper";
 import DetailsFeatures from "../../components/DetailsFeatures/DetailsFeatures";
 import DetailsReviews from "../../components/DetailsReviews/DetailsReviews";
+
 import Line from "../../components/ui/icons/Line";
 import css from "./CamperDetailsPage.module.css";
 
@@ -26,25 +27,27 @@ function CamperDetailsPage() {
       <h1 className={css.title}>Camper</h1>
       <DetailsCamper camper={camper} />
 
-      <div className={css.tabs}>
-        <button
-          className={activeTab === "features" ? css.activeTab : css.tab}
-          onClick={() => setActiveTab("features")}
-        >
-          Features
-          {activeTab === "features" && <Line className={css.activeLine} />}
-        </button>
-        <button
-          className={activeTab === "reviews" ? css.activeTab : css.tab}
-          onClick={() => setActiveTab("reviews")}
-        >
-          Reviews
-          {activeTab === "reviews" && <Line className={css.activeLine} />}
-        </button>
-      </div>
+      <div className={css.topSection}>
+        <div className={css.tabs}>
+          <button
+            className={activeTab === "features" ? css.activeTab : css.tab}
+            onClick={() => setActiveTab("features")}
+          >
+            Features
+            {activeTab === "features" && <Line className={css.activeLine} />}
+          </button>
+          <button
+            className={activeTab === "reviews" ? css.activeTab : css.tab}
+            onClick={() => setActiveTab("reviews")}
+          >
+            Reviews
+            {activeTab === "reviews" && <Line className={css.activeLine} />}
+          </button>
+        </div>
 
-      {activeTab === "features" && <DetailsFeatures camper={camper} />}
-      {activeTab === "reviews" && <DetailsReviews camper={camper} />}
+        {activeTab === "features" && <DetailsFeatures camper={camper} />}
+        {activeTab === "reviews" && <DetailsReviews camper={camper} />}
+      </div>
     </div>
   );
 }

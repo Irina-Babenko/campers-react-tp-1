@@ -1,3 +1,8 @@
+.wraper {
+  display: flex;
+  gap: 40px;
+}
+
 .featuresContainer {
   max-width: 631px;
   padding: 44px 52px;

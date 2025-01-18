@@ -8,6 +8,11 @@
   visibility: hidden;
 }
 
+/* .topSection {
+  display: flex;
+  justify-content: space-between;
+} */
+
 .tabs {
   display: flex;
   gap: 40px;

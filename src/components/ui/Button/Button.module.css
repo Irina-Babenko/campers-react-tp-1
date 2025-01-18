@@ -17,3 +17,8 @@
 .button:active {
   background: var(--primery-color-red-hover);
 }
+
+.submit {
+  display: block;
+  margin: 24px auto 0;
+}
