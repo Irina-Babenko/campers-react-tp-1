@@ -105,8 +105,6 @@ body {
   --font-size-lg: 32px; /* Большой шрифт */
   --font-size-md: 24px; /* Средний шрифт */
   --font-size-sm: 16px; /* Маленький шрифта */
-  --line-height: 1.5; /* Высота строки */
-  /*--padding-md: 16px;  Средний отступ */
   --border-radius-button: 200px;
   --border-radius-icon: 12px;
   --border-radius-hpoto: 10px;

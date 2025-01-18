@@ -34,12 +34,16 @@
   color: var(--primery-color-main);
 }
 
-.firstRow .price {
+.firstRow {
   margin-right: 12px;
 }
 
 .firstRow .name {
   margin-right: auto;
+}
+
+.price {
+  margin-right: 12px;
 }
 
 /* .heartIcon {

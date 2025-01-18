@@ -1,0 +1,54 @@
+.featuresContainer {
+  max-width: 631px;
+  padding: 44px 52px;
+}
+
+.featuresList,
+.vehicleDetailsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featuresList {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 48px;
+  background: var(--primery-color-badges);
+  mix-blend-mode: multiply;
+}
+
+.titleVehicle {
+  margin-bottom: 48px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primery-color-main);
+}
+
+.vehicleDetailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vehicleDetailItem {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--primery-color-main);
+}

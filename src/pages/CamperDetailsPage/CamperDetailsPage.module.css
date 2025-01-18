@@ -1,0 +1,49 @@
+.detailsContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 64px;
+}
+
+.title {
+  visibility: hidden;
+}
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.tab {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primery-color-main);
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.activeTab {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--primery-color-main);
+  cursor: pointer;
+}
+
+.activeLine {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  bottom: -24px;
+  transition: all 0.3s ease;
+}
+
+.line {
+  width: 100%;
+  height: 6px;
+}
