@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../../components/ui/Button/Button";
-import StyledDatePicker from "../../components/StyledDatePicker/StyledDatePicker"; // Импорт нового компонента
+import StyledDatePicker from "../../components/StyledDatePicker/StyledDatePicker";
 import css from "./BookingModal.module.css";
 
 export default function BookingModal() {
@@ -10,6 +10,8 @@ export default function BookingModal() {
     bookingDate: null,
     comment: "",
   });
+
+  const [success, setSuccess] = useState(false); // Состояние для нотификации
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +30,12 @@ export default function BookingModal() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form data submitted:", formData);
+
+    // Имитация успешной отправки формы
+    setTimeout(() => {
+      setSuccess(true);
+      setFormData({ name: "", email: "", bookingDate: null, comment: "" }); // Очищаем форму
+    }, 1000);
   };
 
   return (
@@ -37,6 +44,8 @@ export default function BookingModal() {
       <p className={css.modalSubtitle}>
         Stay connected! We are always ready to help you.
       </p>
+
+      {success && <div className={css.notification}>Booking successful!</div>}
 
       <form onSubmit={handleSubmit} className={css.form}>
         <div className={css.inputGroup}>
