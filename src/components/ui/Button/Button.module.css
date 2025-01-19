@@ -22,3 +22,15 @@
   display: block;
   margin: 24px auto 0;
 }
+
+.more {
+  margin-top: 40px;
+  background: var(--primery-color-white);
+  color: var(--primery-color-main);
+}
+
+.more:hover,
+.more:active {
+  border: 1px solid #d84343;
+  background: var(--primery-color-white);
+}

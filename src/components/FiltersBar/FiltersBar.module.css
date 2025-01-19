@@ -60,7 +60,6 @@
   border-radius: 12px;
   padding: 16px 40px;
   width: 112px;
-  height: 96px;
   cursor: pointer;
   transition: border 0.3s ease, background-color 0.3s ease;
 }

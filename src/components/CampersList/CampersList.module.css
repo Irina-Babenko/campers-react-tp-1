@@ -1,1 +1,5 @@
-
+.container {
+  max-width: 888px;
+  display: grid;
+  place-items: center;
+}

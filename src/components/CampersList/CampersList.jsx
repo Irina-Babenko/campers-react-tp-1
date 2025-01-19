@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCampers } from "../../redux/campersSlice";
 import CamperCard from "../CamperCard/CamperCard";
+import Button from "../ui/Button/Button";
+import css from "./CampersList.module.css";
 
 export default function CampersList() {
   const dispatch = useDispatch();
@@ -22,12 +24,14 @@ export default function CampersList() {
   }
 
   return (
-    <div>
+    <div className={css.container}>
       {campers.slice(0, visibleCount).map((camper) => (
         <CamperCard key={camper.id} camper={camper} />
       ))}
       {visibleCount < campers.length && (
-        <button onClick={handleShowMore}>Load more</button>
+        <Button cssstyle="more" onClick={handleShowMore}>
+          Load more
+        </Button>
       )}
     </div>
   );
