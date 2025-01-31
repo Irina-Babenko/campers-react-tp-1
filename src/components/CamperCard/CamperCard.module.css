@@ -46,7 +46,27 @@
   margin-right: 12px;
 }
 
-/* .heartIcon {
+.heartButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+/* 
+.heartIcon {
+  transition: stroke 0.3s, fill 0.3s; 
+}
+
+.heartButton.favorite {
+  stroke: #e44848;
+  fill: #e44848;
+}
+
+.heartButton.default {
+  stroke: black;
+  fill: none;
 } */
 
 .secondRow {

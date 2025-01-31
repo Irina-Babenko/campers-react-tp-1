@@ -10,6 +10,7 @@
   line-height: var(--line-height);
   text-align: center;
   color: var(--primery-color-white);
+  cursor: pointer;
   transition: box-shadow 0.3s ease;
 }
 

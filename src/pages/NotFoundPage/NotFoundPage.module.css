@@ -1,0 +1,29 @@
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+  text-align: center;
+}
+
+.erroCode {
+  font-size: 160px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--primery-color-red);
+}
+
+.errorMessage {
+  font-size: var(--font-size-lg);
+  margin-top: -4px;
+  color: var(--primery-color-main);
+  display: flex;
+  align-items: center;
+}
+
+.errorIcon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: var(--primery-color-red);
+}

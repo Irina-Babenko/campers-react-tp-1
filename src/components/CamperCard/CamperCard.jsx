@@ -1,43 +1,78 @@
+import { useDispatch, useSelector } from "react-redux";
 import css from "./CamperCard.module.css";
 import clsx from "clsx";
 import Button from "../ui/Button/Button";
 import Heart from "../ui/icons/Heart";
 import Star from "../ui/icons/Star";
 import Map from "../ui/icons/Map";
-
 import { getAvailableFeatures } from "../../utils/getAvailableFeatures";
 import { Link } from "react-router-dom";
+import {
+  addToFavorites,
+  removeFromFavorites,
+} from "../../redux/favoritesCamper/favoritesSlice";
+import { selectFavorites } from "../../redux/favoritesCamper/favoritesSelector";
+import { useEffect } from "react";
 
 export default function CamperCard({ camper }) {
-  const availableFeatures = getAvailableFeatures(camper);
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+  const { id, name, price, rating, location, description, gallery, reviews } =
+    camper;
 
-  const [country, city] = camper.location.split(", ");
+  const isFavorite = favorites.includes(id);
+  console.log("Favorites:", favorites);
+  console.log("Is this camper a favorite?", isFavorite);
+
+  const handleFavoriteClick = () => {
+    console.log("Favorite button clicked, isFavorite:", isFavorite);
+    if (isFavorite) {
+      dispatch(removeFromFavorites(id));
+      console.log(`Removed camper ${id} from favorites`);
+    } else {
+      dispatch(addToFavorites(id));
+      console.log(`Added camper ${id} to favorites`);
+    }
+  };
+
+  useEffect(() => {
+    console.log("Updated favorites:", favorites);
+  }, [favorites]);
+
+  const availableFeatures = getAvailableFeatures(camper);
+  const [country, city] = location.split(", ");
 
   return (
     <div className={css.card}>
-      {camper.gallery?.length > 0 && (
-        <img
-          className={css.image}
-          src={camper.gallery[0].thumb}
-          alt={camper.name}
-        />
+      {gallery?.length > 0 && (
+        <img className={css.image} src={gallery[0].thumb} alt={name} />
       )}
       <div className={css.text}>
         <div className={css.firstRow}>
-          <h3 className={css.name}>{camper.name}</h3>
-          <p className={css.price}>€{camper.price.toFixed(2)}</p>
-          <Heart className={css.heartIcon} />
+          <h3 className={css.name}>{name}</h3>
+          <p className={css.price}>€{price.toFixed(2)}</p>
+          <button
+            className={css.heartButton}
+            onClick={handleFavoriteClick}
+            aria-label="Add to favorites"
+          >
+            <Heart
+              className={`${css.heartIcon} ${
+                isFavorite ? css.favorite : css.default
+              }`}
+            />
+          </button>
         </div>
         <div className={css.secondRow}>
           <Star className={clsx(css.star)} />
-          <p className={css.rating}>{camper.rating} </p>
-          <p className={css.reviews}>({camper.reviews.length} Reviews)</p>
+          <p className={css.rating}>{rating} </p>
+          <p className={css.reviews}>({reviews.length} Reviews)</p>
           <Map size={16} />
           <p className={css.location}>
             {city}, {country}
           </p>
         </div>
-        <p className={css.description}>{camper.description}</p>
+        <p className={css.description}>{description}</p>
 
         <div className={css.features}>
           {availableFeatures.map(({ label, Icon }) => (
@@ -47,7 +82,7 @@ export default function CamperCard({ camper }) {
             </div>
           ))}
         </div>
-        <Link to={`/catalog/${camper.id}`}>
+        <Link to={`/catalog/${id}`}>
           <Button>Show more</Button>
         </Link>
       </div>
