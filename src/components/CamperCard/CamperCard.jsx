@@ -2,7 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import css from "./CamperCard.module.css";
 import clsx from "clsx";
 import Button from "../ui/Button/Button";
-import Heart from "../ui/icons/Heart";
+import HeartButton from "../ui/HeartButton/HeartButton";
+// import Heart from "../ui/icons/Heart";
 import Star from "../ui/icons/Star";
 import Map from "../ui/icons/Map";
 import { getAvailableFeatures } from "../../utils/getAvailableFeatures";
@@ -51,17 +52,8 @@ export default function CamperCard({ camper }) {
         <div className={css.firstRow}>
           <h3 className={css.name}>{name}</h3>
           <p className={css.price}>€{price.toFixed(2)}</p>
-          <button
-            className={css.heartButton}
-            onClick={handleFavoriteClick}
-            aria-label="Add to favorites"
-          >
-            <Heart
-              className={`${css.heartIcon} ${
-                isFavorite ? css.favorite : css.default
-              }`}
-            />
-          </button>
+
+          <HeartButton isFavorite={isFavorite} onClick={handleFavoriteClick} />
         </div>
         <div className={css.secondRow}>
           <Star className={clsx(css.star)} />
